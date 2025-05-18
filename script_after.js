@@ -5,12 +5,12 @@ const popstateEventHandler = () => {
   if (!popup || initialUrl !== location.href) return;
   popup.style.display = 'block';
 };
-window.addEventListener('popstate', popstateEventHandler);
 const shortGestureName = window.ontouchend === null ? 'touchend' : 'click';
 window.addEventListener(
   shortGestureName,
   (event) => {
     history.pushState({ page: 1 }, '', location.href);
+    window.addEventListener('popstate', popstateEventHandler);
   },
   {
     once: true,
