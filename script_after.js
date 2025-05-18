@@ -12,7 +12,8 @@ const popstateEventHandler = () => {
 };
 const shortGestureName = window.ontouchend === null ? 'touchend' : 'click';
 window.addEventListener('load', (loadEvent) => {
-  window.addEventListener(
+  document.getElementById('message').innerText = `load complited`;
+  document.addEventListener(
     shortGestureName,
     (event) => {
       document.getElementById('message').innerText = `${shortGestureName} was fired`;
