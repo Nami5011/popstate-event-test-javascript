@@ -11,17 +11,19 @@ const popstateEventHandler = () => {
   popup.style.display = 'block';
 };
 const shortGestureName = window.ontouchend === null ? 'touchend' : 'click';
-window.addEventListener(
-  shortGestureName,
-  (event) => {
-    document.getElementById('message').innerText = `${shortGestureName} was fired`;
-    history.pushState({ page: 1 }, '', location.href);
-    window.addEventListener('popstate', popstateEventHandler);
-  },
-  {
-    once: true,
-  }
-);
+window.addEventListener('load', (loadEvent) => {
+  window.addEventListener(
+    shortGestureName,
+    (event) => {
+      document.getElementById('message').innerText = `${shortGestureName} was fired`;
+      history.pushState({ page: 1 }, '', location.href);
+      window.addEventListener('popstate', popstateEventHandler);
+    },
+    {
+      once: true,
+    }
+  );
+});
 
 const closePopUp = () => {
   popup.style.display = 'none';
