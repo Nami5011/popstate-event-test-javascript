@@ -2,11 +2,6 @@ const popup = document.getElementById('popup');
 const initialUrl = location.href;
 
 const popstateEventHandler = () => {
-  document.getElementById('message').innerText = 'popstate was fired';
-  if (!popup) {
-    document.getElementById('message').innerText = 'popstate was fired. popup is undefined.';
-    alert('popup is undefined.');
-  }
   if (!popup || initialUrl !== location.href) return;
   popup.style.display = 'block';
 };
@@ -14,7 +9,6 @@ const shortGestureName = window.ontouchend === null ? 'touchend' : 'click';
 document.addEventListener(
   shortGestureName,
   (event) => {
-    document.getElementById('message').innerText = `${shortGestureName} was fired`;
     history.pushState({ page: 1 }, '', location.href);
     window.addEventListener('popstate', popstateEventHandler);
   },
