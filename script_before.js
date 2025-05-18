@@ -15,7 +15,7 @@ const closePopUp = () => {
 // When the user clicks Cancel button, close the modal
 document.querySelector('.close').addEventListener('click', closePopUp);
 // When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', (event) => {
+document.addEventListener('click', (event) => {
   if (event.target == popup) {
     closePopUp();
   }
