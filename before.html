@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Second page (Before)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script_before.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Second page (Before)</h1>
+      <p>
+        Click anywhere on this page once, then go back to the previous page by
+        browser back
+      </p>
+
+      <!-- Pop-up -->
+      <div id="popup" class="modal">
+        <div class="modal-content">
+          <p>Are you sure you want to go back?</p>
+          <div class="modal-content-btns">
+            <button type="button" onclick="history.back()">Yes</button>
+            <button type="button" class="close">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

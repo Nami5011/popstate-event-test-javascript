@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+a.link-btn {
+  display: block;
+  min-width: 9rem;
+  max-width: 300px;
+  padding: 0.5rem;
+  margin: 20px;
+  border-radius: 0.2rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #161616;
+  transition: all 0.2s ease;
+}
+
+a.link-btn:hover {
+  background-color: #585858;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content p {
+  text-align: center;
+}
+
+.modal-content .modal-content-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-content .modal-content-btns button {
+  min-width: 8rem;
+  max-width: 300px;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #161616;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-content .modal-content-btns button:hover {
+  background-color: #585858;
+}
