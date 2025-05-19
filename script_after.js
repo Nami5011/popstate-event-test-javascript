@@ -10,7 +10,7 @@ const shortGestureName = window.ontouchend === null ? 'touchend' : 'click';
 document.addEventListener(
   shortGestureName,
   (event) => {
-    history.pushState({ page: 1 }, '', location.href);
+    history.pushState({}, '', location.href);
   },
   {
     once: true,
@@ -19,7 +19,7 @@ document.addEventListener(
 
 const closePopUp = () => {
   popup.style.display = 'none';
-  history.pushState({ page: 1 }, '', location.href);
+  history.pushState({}, '', location.href);
 };
 // When the user clicks Cancel button, close the modal
 document.querySelector('.close').addEventListener('click', closePopUp);
